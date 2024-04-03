@@ -7,13 +7,14 @@ import Book from './ch03/Book';
 import Library from './ch03/Library';
 import reportWebVitals from './reportWebVitals';
 import CommentList from './ch05/CommnetList';
+import NotificationList from './ch06/NotificationList';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-      <CommentList/>
+      <NotificationList/>
     </React.StrictMode>
 );
 
