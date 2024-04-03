@@ -6,17 +6,22 @@ import App from './App';
 import Book from './ch03/Book';
 import Library from './ch03/Library';
 import reportWebVitals from './reportWebVitals';
-import CommentList from './ch05/CommnetList';
-
+// import Hello from './Hello'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(
+setInterval(() => {
+  root.render(
     <React.StrictMode>
-      <CommentList/>
+      <Clock/>
     </React.StrictMode>
-);
+  );
+}, 1000);
 
+// root.render(
+//   <React.StrictMode>
+//     <Library />
+//   </React.StrictMode>
+// );
 
 
 // If you want to start measuring performance in your app, pass a function
