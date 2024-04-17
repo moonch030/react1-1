@@ -1,6 +1,36 @@
 # REACT1-1
 ## 문채현 202230310
 https://github.com/soaple/first-met-react-practice-v18
+---
+### 2024-04-17 강의 내용
+### ch07 훅
+### 1. 훅이란 무엇인가?
+- `클래스형 컴포넌트`에서는 생성자(constructor)에서 state를 정의하고, setState() 함수를 통해 state를 업데이트 한다.   
+- `예전에 사용하던 함수형 컴포넌트`는 별도로 state를 정의하거나, 컴포넌트의 생명주기에 맞춰서 어떤 코드가 실행되도록 할 수 없었다.      
+- 함수형 컴포넌트에서도 state나 생명주기 함수의 기능을 사용하게 해주기 위해 추가된 기능이 `훅(Hook)`이다.   
+- 함수형 컴포넌트도 훅을 사용하여 클래스형 컴포넌트의 기능을 모두 `동일하게 구현`할 수 있게 되었다.   
+- Hook이란 `state와 생명주기 기능에 갈고리를 걸어 원하는 시점에 정해진 함수를 실행되도록 만든 함수`를 의미한다.   
+- 훅의 이름은 모두 `use`로 시작한다.   
+- 사용자 정의 훅(custom hook)을 만들 수 있으며, 이 경우에 이름은 자유롭게 할 수 있으나 `use`로 시작할 것을 권장한다.   
+### 2. useSate
+- useState는 함수형 컴포넌트에서 state를 사용하기 위한 Hook 이다.   
+- 다음 예제는 버튼을 클릭할 때마다 카운트가 증가하는 함수형 컴포넌트다.   
+- 하지만 증가는 시킬 수 있지만 증가할 때마다 재 렌더링은 일어나지 않는다.   
+- 이럴 때 state를 사용해야 하지만 함수형에는 없기 때문에 useState()를 사용한다.   
+```
+import React, {useState} from "react"
+
+export default function Counter(Props){
+    const [count, setCount] = useState(0)
+    return (
+        <>
+            <p>총 {count}번 클릭했습니다.</p>
+            <button onClick={() => setCount(count++)}>클릭</button>
+        </>
+    )
+}
+```
+---
 ### 2024-04-02 강의 내용
 ### 1. 컴포넌트에 대해 알아보기
 - 리액트는 컴포넌트 기반의 구조   
