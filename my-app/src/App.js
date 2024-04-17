@@ -2,13 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import Welcome from './ch05/Welcome';
 import NotificationList from './ch06/NotificationList';
-import Counter from './ch07/Counter';
+import FocusButton from './ch07/FocusButton';
 
 function App() {
-  let count = 0
   return (
     <div className="App">
-      <Counter/>
+      <FocusButton/>
     </div>
   );
 }
