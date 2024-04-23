@@ -1,13 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Welcome from './ch05/Welcome';
-import NotificationList from './ch06/NotificationList';
-import FocusButton from './ch07/FocusButton';
+import CommentList from './ch05/CommentList';
 
 function App() {
   return (
     <div className="App">
-      <FocusButton/>
+      <CommentList />
     </div>
   );
 }

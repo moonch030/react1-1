@@ -1,7 +1,7 @@
 import Comment from "./Comment";
+import React from "react";
 
-
-export default function CommentList(){
+function CommentList(){
     return(
         <div>
             <Comment name = "문채현" comment="아엠어탑 슈퍼 레이디"/>
@@ -10,3 +10,5 @@ export default function CommentList(){
         </div>
     )
 }
+
+export default CommentList;

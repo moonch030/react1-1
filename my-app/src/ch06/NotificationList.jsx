@@ -69,3 +69,5 @@ class NotificationList extends React.Component {
 }
 
 export default NotificationList;
+//npm install --save-dev @babel/plugin-proposal-private-property-in-object
+// map 함수 실행 안될때
