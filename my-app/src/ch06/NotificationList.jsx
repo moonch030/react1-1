@@ -1,6 +1,7 @@
 import React from "react";
 import Notification from "./Notification";
 
+// 사전 정의된 알림 목록
 const reservedNotifications = [
     {
         id: 1,
@@ -16,18 +17,19 @@ const reservedNotifications = [
     },
 ];
 
-var timer;
+var timer; // 타이머를 위한 변수
 
 class NotificationList extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            notifications: [],
+            notifications: [], // 초기 상태로 알림 배열을 비워둠
         };
     }
 
     componentDidMount() {
+        // 컴포넌트 마운트 후, 주기적으로 알림을 추가
         const { notifications } = this.state;
         timer = setInterval(() => {
             if (notifications.length < reservedNotifications.length) {
@@ -36,7 +38,8 @@ class NotificationList extends React.Component {
                 this.setState({
                     notifications: notifications,
                 });
-            } else { //출력이 없어지지 않게 하려면
+            } else { 
+                // 주석 처리된 코드: 모든 알림이 표시된 후 초기화 및 타이머 중지
                 // this.setState({
                 //     notifications: [],
                 // });
@@ -46,12 +49,14 @@ class NotificationList extends React.Component {
     }
 
     componentWillUnmount() {
+        // 컴포넌트가 언마운트될 때 타이머를 정리
         if (timer) {
             clearInterval(timer);
         }
     }
 
     render() {
+        // notifications 배열을 매핑하여 각 Notification 컴포넌트를 렌더링
         return (
             <div>
                 {this.state.notifications.map((notification) => {
@@ -69,5 +74,3 @@ class NotificationList extends React.Component {
 }
 
 export default NotificationList;
-//npm install --save-dev @babel/plugin-proposal-private-property-in-object
-// map 함수 실행 안될때
