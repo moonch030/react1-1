@@ -2,6 +2,39 @@
 ## 문채현 202230310
 https://github.com/soaple/first-met-react-practice-v18
 ---
+### 2024-05-01 강의 내용
+### ch07 훅
+### 훅의 규칙
+- `두번째 규칙`은 `함수형 컴포넌트에서만 훅을 호출`해야 한다는 것.   
+- 따라서 일반 자바스크립트 함수에서 훅을 호출하면 안됨.   
+- 훅은 `함수형 컴포넌트` 혹은 직접 만든 `커스텀 훅에서만 호출`할 수 있음.
+### 나만의 훅 만들기
+- 필요하다면 직접 훅을 만들어 쓸 수도 있음. 이것을 `커스텀 훅`이라고 함.   
+1. 커스텀 훅을 만들어야 하는 상황   
+예제 UserStatus 컴포넌트는 isOnline이라는 state에 따라서 사용자의 상태가 온라인인지 아닌지를 텍스트로 보여주는 컴포넌트
+```
+import React, {useState, useEffect} from "react";
+
+function UserStatus(props){
+    const [isOnline, setIsOnline] = useState(null);
+
+    useEffect(() => {
+        function handleStatusChange(status){
+            setIsOnline(status.isOnline);
+        }
+
+        ServerAPI.subscribeUserStatus(props.user.id, handleStatusChange);
+        return () => {
+            ServerAPI.unsubscribeUserStatus(props.user.id,handleStatusChange);
+        }
+    });
+    if(isOnline === null){
+        return '대기중...';
+    }
+    return isOnline ? '온라인' : '오프라인';
+}
+```
+---
 ### 2024-04-17 강의 내용
 ### ch07 훅
 ### 1. 훅이란 무엇인가?
