@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function MyButton(props){
     const handleDelete = (id, e) => {
         console.log(id,e.target)
