@@ -1,13 +1,12 @@
 import './App.css';
-import LoginControl from './ch08/LoginControl';
+import MainPage from './ch08/MainPage';
 
 function App() {
   return (
     <div className="App">
-      <LoginControl />
+      <MainPage />
     </div>
   );
 }
 
 export default App;
-
