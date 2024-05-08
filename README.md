@@ -2,6 +2,26 @@
 ## 문채현 202230310
 https://github.com/soaple/first-met-react-practice-v18
 ---
+### 2024-05-08 강의내용
+### 이벤트 핸들링
+#### 이벤트 핸들러 추가하는 방법
+- 버튼을 클릭하면 이벤트 핸들러 함수인 handleClick()함수를 호출   
+- bind를 사용하지 않으면 this.handleClick은 글로벌 스코프에서 호출되어, undefined으로 사용할 수 없기 때문   
+- bind를 사용하지 않으려면 화살표 함수를 사용하는 방법도 있음.   
+- 하지만 클래스 컴포넌트는 이제 거의 사용하지 않기 때문에 이 내용은 참고만...   
+- 함수형에서는 this를 사용하지 않고, onClick에서 바로 HandleClick을 넘기면 된다.   
+#### 8.2 Arguments 전달하기
+- 함수를 정의할 때는 파라미터 혹은 매개변수, 함수를 사용할때는 아규먼트 혹은 인수라고 부른다.   
+- 이벤트 핸들러에 매개변수를 전달해야 하는 경우도 많음.   
+```
+<button onClick={(event) => this.deleteItem(id,event)}>삭제하기</button>
+<button onClick={this.deleteItem.bind(this.id)}>삭제하기</button>
+```
+- 위의 코드는 모두 동일한 역할을 하지만 하나는 화살표 함수, 다른 하나는 bind를 사용 했음.   
+- event라는 매개변수는 리액트의 이벤트 객체를 말함   
+- 두 방법 모두 첫 번째 매개변수는 id 이고 두 번째 매개변수로 event가 전달.   
+
+---
 ### 2024-05-01 강의 내용
 ### ch07 훅
 ### 훅의 규칙
