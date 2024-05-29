@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function SignUp(){
     const [name, setName]=useState()
     const [gender, setGender]=useState("여자")
+    const [text,setText]=useState()
 
     const handleChangeName = (e) => {
         setName(e.target.value)
@@ -10,8 +11,11 @@ export default function SignUp(){
     const handleChangeGender = (e) => {
         setGender(e.target.value)
     }
+    const handleChangeText = (e) => {
+        setText(e.target.value)
+    }
     const handleSubmit = (e) => {
-        alert(`이름: ${name}, 성별: ${gender}`)
+        alert(`이름: ${name}, 성별: ${gender}, 텍스트: ${text}`)
         e.preventDefault()
     }
 
@@ -28,6 +32,10 @@ export default function SignUp(){
                     <option value="남자">남자</option>
                     <option value="여자">여자</option>
                 </select>
+            </label><br/>
+            <label>
+                텍스트 입력:
+                <textarea value={text} onChange={handleChangeText} placeholder="여기에 입력하세용."></textarea>
             </label>
             <button type="submit">제출</button>
         </form>
