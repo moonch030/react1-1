@@ -1,10 +1,10 @@
 import './App.css';
-import BoilingVerdict from './ch10/BoilingVerdict';
+import Calculator from './ch11/Calculator';
 
 function App() {
   return (
     <div className="App">
-      <BoilingVerdict celsius="100"/>
+      <Calculator/>
     </div>
   );
 }

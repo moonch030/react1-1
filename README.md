@@ -2,6 +2,14 @@
 ## 문채현 202230310
 https://github.com/soaple/first-met-react-practice-v18
 ---
+### 2024-06-05 강의내용
+#### 12.1 Shared State
+- Shared state는 state의 공유를 의미함.   
+- 같은 부모 컴포넌트의 state를 자식 컴포넌트가 공유해서 사용   
+
+#### 12.2 하위 컴포넌트에서 state 공유하기
+
+---
 ### 2024-05-29 강의 내용
 #### 11.4 select 태그
 - select 태그도 textarea와 동일
