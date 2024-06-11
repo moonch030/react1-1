@@ -1,10 +1,13 @@
-import './App.css';
-import Calculator from './ch11/Calculator';
+import './App.css'
+import SplitPane from './ch11/SplitPane';
 
 function App() {
   return (
     <div className="App">
-      <Calculator/>
+      <SplitPane
+      left={<Contacts/>}
+      rigth={<Chat/>}
+      />
     </div>
   );
 }

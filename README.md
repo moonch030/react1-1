@@ -2,6 +2,17 @@
 ## 문채현 202230310
 https://github.com/soaple/first-met-react-practice-v18
 ---
+### 2024-06-11 강의내용
+#### [2] Specializaion (특수화, 전문화)
+- 웰컴다이얼로그는 다이얼로그의 특별한 케이스다.
+- 범용적인 개념을 구별이 되게 구체화하는것을 특수화라고 한다.
+- `객체지향 언어`에서는 `상속`을 사용하여 특수화를 구현한다.
+- 리액트에서는 `합성`을 사용하여 특수화를 구현한다.
+
+#### [3] Containment와 Specialization을 같이 사용하기
+- Containment를 위해서 props.children을 사용하고, Specialization을 위해 직접 정의한 props를 사용하면 된다.
+- Dialog컴포넌트는 이전의 것과 비슷한데 Containment를 위해 끝부분에 props.children을 추가한다.
+---
 ### 2024-06-05 강의내용
 #### 12.1 Shared State
 - Shared state는 state의 공유를 의미함.   
